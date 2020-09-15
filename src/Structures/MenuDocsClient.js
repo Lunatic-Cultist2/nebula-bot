@@ -1,4 +1,4 @@
-const { Client, Collection } = require('discord.js');
+const { Client, Collection, MessageEmbed } = require('discord.js');
 const Util = require('./Util.js');
 
 module.exports = class MenuDocsClient extends Client {
@@ -20,12 +20,15 @@ module.exports = class MenuDocsClient extends Client {
 		});
 
 		this.on('message', async (message) => {
+			const prefixEmbed = new MessageEmbed();
+				prefixEmbed.setDescription(`✅ - My prefix for **${message.guild.name}** is: \`${this.prefix}\``);
+				prefixEmbed.setColor('GREEN');
 			const mentionRegex = RegExp(`^<@!${this.user.id}>$`);
 			const mentionRegexPrefix = RegExp(`^<@!${this.user.id}> `);
 
 			if (!message.guild || message.author.bot) return;
 
-			if (message.content.match(mentionRegex)) message.channel.send(`✅ - My prefix for **${message.guild.name}** is: \`${this.prefix}\``);
+			if (message.content.match(mentionRegex)) message.channel.send(prefixEmbed);
 
 			const prefix = message.content.match(mentionRegexPrefix) ?
 				message.content.match(mentionRegexPrefix)[0] : this.prefix;
