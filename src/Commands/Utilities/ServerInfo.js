@@ -49,7 +49,7 @@ module.exports = class extends Command {
             .addField(`**Roles Count:**`, `${roles.length} Roles`, true)
             .addField(`**Server Creation Date:**`, `📆 - ${moment(message.guild.createdTimestamp).format('LL')} (${moment(message.guild.createdTimestamp).fromNow()})`)
             .setFooter(message.guild.name)
-            .setTimestamp();
-		message.channel.send(serverEmbed);
+            .setTimestamp()
+		return message.channel.send(serverEmbed);
 	}
 };

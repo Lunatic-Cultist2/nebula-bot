@@ -22,7 +22,7 @@ module.exports = class MenuDocsClient extends Client {
 		this.on('message', async (message) => {
 			const prefixEmbed = new MessageEmbed();
 				prefixEmbed.setDescription(`✅ - My prefix for **${message.guild.name}** is: \`${this.prefix}\``);
-				prefixEmbed.setColor('GREEN');
+				prefixEmbed.setColor('#00FF00');
 			const mentionRegex = RegExp(`^<@!${this.user.id}>$`);
 			const mentionRegexPrefix = RegExp(`^<@!${this.user.id}> `);
 

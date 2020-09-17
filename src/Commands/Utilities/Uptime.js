@@ -16,7 +16,7 @@ module.exports = class extends Command {
 	async run(message, args) {
 		const uptimeEmbed = new MessageEmbed()
 			.setDescription(`📥 - My uptime is: \`${ms(this.client.uptime, { long: true })}\``)
-			.setColor('GREEN')
+			.setColor('#00FF00')
 		message.channel.send(uptimeEmbed);
 	}
 };

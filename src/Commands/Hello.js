@@ -13,7 +13,7 @@ module.exports = class extends Command {
 	async run(message, args) {
 		const helloEmbed = new MessageEmbed()
 			.setDescription('👋 - Hello!')
-			.setColor('YELLOW')
+			.setColor('#FFD500')
 		message.channel.send(helloEmbed);
 	}
 };

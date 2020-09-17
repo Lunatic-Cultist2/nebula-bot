@@ -17,7 +17,7 @@ module.exports = class extends Command {
 			const latency = msg.createdTimestamp - message.createdTimestamp;
 			const pingEmbed = new MessageEmbed()
 				.setDescription(`🏓 - Bot Latency: \`${latency}ms\`, API Latency: \`${Math.round(this.client.ws.ping)}ms\``)
-				.setColor('RED')
+				.setColor('#FF0000')
 			msg.edit(pingEmbed);
 			msg.edit('\u200B');
 		});
