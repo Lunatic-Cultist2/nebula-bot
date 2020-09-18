@@ -1,6 +1,6 @@
 {
   "name": "nebula-bot",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "main": "src/index.js",
   "repository": "https://github.com/Lunatic-Cultist2/nebula-bot.git",
   "author": "Lunatic Cultist <haddi.tariqch1@gmail.com>",
@@ -15,7 +15,6 @@
     "glob": "^7.1.6",
     "moment": "^2.28.0",
     "ms": "^2.1.2",
-    "nodemon": "^2.0.4",
     "path": "^0.12.7",
     "util": "^0.12.3"
   }
