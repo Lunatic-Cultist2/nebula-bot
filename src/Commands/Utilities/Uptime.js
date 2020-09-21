@@ -7,7 +7,7 @@ module.exports = class extends Command {
 	constructor(...args) {
 		super(...args, {
 			aliases: ['up', 'ut'],
-			description: 'Displays how long the bot has been online for.',
+			description: 'Displays how long the Discord bot has been online for.',
 			category: 'Utility Commands'
 		});
 	}

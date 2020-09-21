@@ -14,8 +14,8 @@ module.exports = class extends Command {
 	constructor(...args) {
 		super(...args, {
 			aliases: ['user', 'ui', 'whois'],
-			description: 'Displays information about a provided user or the message author.',
-			category: 'Information',
+			description: 'Displays information about yourself or a specified user.',
+			category: 'Info Commands',
 			usage: '[user]'
 		});
 	}
@@ -32,7 +32,7 @@ module.exports = class extends Command {
             else if (member.presence.activities.length < 1) game = "Not Playing a Game";
                 return game;
             }
-        const serverEmbed = new MessageEmbed()
+        const userEmbed = new MessageEmbed()
             .setAuthor(member.user.tag, member.user.displayAvatarURL(), member.user.displayAvatarURL({ dynamic: true, size: 2048 }))
             .setColor('#333333')
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
@@ -44,6 +44,6 @@ module.exports = class extends Command {
             .addField(`**🎮 Game:**`, `${game()}`, true)
             .setFooter(member.user.tag)
             .setTimestamp()
-		return message.channel.send(serverEmbed);
+		return message.channel.send(userEmbed);
 	}
 };

@@ -23,7 +23,7 @@ module.exports = class extends Command {
 	constructor(...args) {
 		super(...args, {
 			aliases: ['server', 'guild', 'guildinfo'],
-			description: 'Displays information about the Discord server that said message was run in.',
+			description: 'Displays information about the server you\'re in.',
 			category: 'Info Commands'
 		});
 	}
