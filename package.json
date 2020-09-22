@@ -1,6 +1,6 @@
 {
   "name": "nebula-bot",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "main": "src/index.js",
   "repository": "https://github.com/Lunatic-Cultist2/nebula-bot.git",
   "author": "Lunatic Cultist <haddi.tariqch1@gmail.com>",
